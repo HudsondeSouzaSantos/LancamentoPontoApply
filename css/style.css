@@ -1,0 +1,62 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+}
+
+.logo {
+    width: 5em;
+    height: 5em;
+    position: relative;
+}
+
+.textTitle {
+    font-size: 1.4em;
+    font-weight: bold;
+    padding: 1em;
+    position: absolute;
+    bottom: 0em;
+    right: 0;
+}
+
+.caixa {
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+    background-color: white;
+}
+
+p {
+    padding: 0.5em;
+}
+
+.corpo {
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0;
+    height: 70%;
+    background-color: white;
+}
+
+footer {
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+    text-align: center;
+    background: url("../img/bgFooter.png");
+    padding: 1em 0;
+}
+
+footer p {
+    font-style: italic;
+    text-transform: lowercase;
+}
+
+.copyright {
+    color: white;
+    font-size: 13px;
+    margin: 20px 0;
+}
+
+.nomeDev {
+    text-transform: capitalize;
+}

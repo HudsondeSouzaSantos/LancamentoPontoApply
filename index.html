@@ -1,0 +1,50 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Preenchimento folha ponto apply</title>
+    <script>
+        function imprime() {
+            var rads = document.getElementsByName("funcionario");
+            var funcionarioSelecionado = "";
+            for (var i = 0; i < rads.length; i++) {
+                if (rads[i].checked) {
+                    funcionarioSelecionado = rads[i].value;
+                }
+            }
+            window.open("./pagePrint.html?".concat(funcionarioSelecionado), "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=10,left=10,width=400,height=400", "replace");
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="caixa">
+            <img class="logo" src="img/logo.png">
+            <h1 class="textTitle">Lançamento de Ponto</h1>
+        </div>
+    </header>
+    <main>
+        <div class="corpo">
+            <p>Este site foi desenvolvido para preenchimento automático das folhas de ponto disponibilizado pela Apply.</p>
+            <p>Para correta utilização, deve-se primeiramete enviar os arquivos de imagem para o Hudson e também o arquivo JS com seus dados para disponibilizar no combobox abaixo.</p>
+            <p>Após esse procedimento seu nome irá aparecer no combo abaixo e basta selecionar para imprimir sua folha de ponto.</p>
+            <p>
+                <form>
+                    <input type="radio" name="funcionario" value="ayrton"> Ayrton Senna<br />
+                    <input type="radio" name="funcionario" value="hudson"> Hudson de Souza Santos<br />
+                </form>
+                <p></p><button onclick="imprime()">imprimir</button></p>
+            </p>
+        </div>
+    </main>
+    <footer>
+        <p class="copyright">developer by &copy; <span class="nomeDev">hudson</span> de <span class="nomeDev">souza santos</span></p>
+    </footer>
+</body>
+
+</html>
