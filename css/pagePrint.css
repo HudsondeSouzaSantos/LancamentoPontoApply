@@ -1,0 +1,51 @@
+body {
+    font-family: 'Times New Roman', Times, serif
+}
+
+.principal {
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 29px;
+}
+
+table {
+    border: 2.5px solid black;
+    width: 811px;
+}
+
+td {
+    border: 2px solid black;
+    width: 20%;
+    padding: 2px 2px 2px 2px;
+}
+
+.titulo {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+}
+
+.branco {
+    background-color: white;
+}
+
+.cinza {
+    background-color: gray;
+    ;
+}
+
+.campo {
+    text-transform: capitalize;
+    text-align: left;
+}
+
+.conteudo {
+    text-transform: uppercase;
+    text-align: left;
+    font-weight: bold;
+}
+
+.especialCTPS {
+    text-transform: uppercase;
+}

@@ -9,14 +9,25 @@
     <title>Preenchimento folha ponto apply</title>
     <script>
         function imprime() {
-            var rads = document.getElementsByName("funcionario");
+            var srcOpen = "./pagePrint.html?";
+            var radsEmpresa = document.getElementsByName("empresa");
+            var empresaSelecionado = "";
+            var radsFuncionario = document.getElementsByName("funcionario");
             var funcionarioSelecionado = "";
-            for (var i = 0; i < rads.length; i++) {
-                if (rads[i].checked) {
-                    funcionarioSelecionado = rads[i].value;
+            for (var i = 0; i < radsEmpresa.length; i++) {
+                if (radsEmpresa[i].checked) {
+                    empresaSelecionado = radsEmpresa[i].value;
                 }
             }
-            window.open("./pagePrint.html?".concat(funcionarioSelecionado), "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=10,left=10,width=400,height=400", "replace");
+            for (var i = 0; i < radsFuncionario.length; i++) {
+                if (radsFuncionario[i].checked) {
+                    funcionarioSelecionado = radsFuncionario[i].value;
+                }
+            }
+            srcOpen = srcOpen.concat("empresa=", empresaSelecionado);
+            srcOpen = srcOpen.concat("&");
+            srcOpen = srcOpen.concat("funcionario=", funcionarioSelecionado);
+            window.open(srcOpen, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=10,left=10,width=1200,height=800", "replace");
         }
     </script>
 </head>
@@ -33,13 +44,24 @@
             <p>Este site foi desenvolvido para preenchimento automático das folhas de ponto disponibilizado pela Apply.</p>
             <p>Para correta utilização, deve-se primeiramete enviar os arquivos de imagem para o Hudson e também o arquivo JS com seus dados para disponibilizar no combobox abaixo.</p>
             <p>Após esse procedimento seu nome irá aparecer no combo abaixo e basta selecionar para imprimir sua folha de ponto.</p>
-            <p>
-                <form>
-                    <input type="radio" name="funcionario" value="ayrton"> Ayrton Senna<br />
-                    <input type="radio" name="funcionario" value="hudson"> Hudson de Souza Santos<br />
-                </form>
-                <p></p><button onclick="imprime()">imprimir</button></p>
-            </p>
+            <form class="escolha">
+                <h2>Defina a empresa empregadora</h2>
+                <input type="radio" name="empresa" value="0">Appl<br />
+                <input type="radio" name="empresa" value="1">Apply<br />
+            </form>
+            <form class="escolha">
+                <h2>Defina o funcionário</h2>
+                <input type="radio" name="funcionario" value="ayrton">Ayrton Senna<br />
+                <input type="radio" name="funcionario" value="hudson">Hudson de Souza Santos<br />
+            </form>
+            <form class="escolha">
+                <h2>Defina o Ano / Mes</h2>
+                <label for="ano">Ano (aaaa)</label>
+                <input type="text" id="ano" name="ano">
+                <label for="mês">Mês (mm)</label>
+                <input type="text" id="mes" name="mes">
+            </form>
+            <button onclick="imprime()">imprimir</button>
         </div>
     </main>
     <footer>
