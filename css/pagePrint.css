@@ -46,6 +46,24 @@ td {
     font-weight: bold;
 }
 
-.especialCTPS {
+.campo_maiuscula {
     text-transform: uppercase;
+    text-align: left;
+}
+
+.campo_centralizado {
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.conteudo_direita {
+    text-transform: uppercase;
+    text-align: right;
+    font-weight: bold;
+}
+
+.assinatura {
+    margin: none;
+    position: absolute;
+    transform: translateY(-50%);
 }

@@ -14,6 +14,8 @@
             var empresaSelecionado = "";
             var radsFuncionario = document.getElementsByName("funcionario");
             var funcionarioSelecionado = "";
+            var anoSelecionado = document.getElementById("ano").value;
+            var mesSelecionado = document.getElementById("mes").value;
             for (var i = 0; i < radsEmpresa.length; i++) {
                 if (radsEmpresa[i].checked) {
                     empresaSelecionado = radsEmpresa[i].value;
@@ -27,6 +29,10 @@
             srcOpen = srcOpen.concat("empresa=", empresaSelecionado);
             srcOpen = srcOpen.concat("&");
             srcOpen = srcOpen.concat("funcionario=", funcionarioSelecionado);
+            srcOpen = srcOpen.concat("&");
+            srcOpen = srcOpen.concat("ano=", anoSelecionado);
+            srcOpen = srcOpen.concat("&");
+            srcOpen = srcOpen.concat("mes=", mesSelecionado);
             window.open(srcOpen, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=10,left=10,width=1200,height=800", "replace");
         }
     </script>
@@ -51,8 +57,8 @@
             </form>
             <form class="escolha">
                 <h2>Defina o funcionário</h2>
-                <input type="radio" name="funcionario" value="ayrton">Ayrton Senna<br />
-                <input type="radio" name="funcionario" value="hudson">Hudson de Souza Santos<br />
+                <input type="radio" name="funcionario" value="0">Matheus AntonioLambiazzi<br />
+                <input type="radio" name="funcionario" value="1">Hudson de Souza Santos<br />
             </form>
             <form class="escolha">
                 <h2>Defina o Ano / Mes</h2>

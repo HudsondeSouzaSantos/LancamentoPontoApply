@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/pagePrint.css">
+    <script type="text/javascript" src="dados/dados.js"></script>
     <script type="text/javascript" src="js/pagePrint.js"></script>
     <title>Preenchimento folha ponto apply</title>
 </head>
@@ -13,32 +14,67 @@
 <body>
     <main>
         <div id="principal" class="principal">
-            <table>
+            <table id="tabelaPonto">
                 <tr>
-                    <td class="titulo branco" colspan="5">folha de ponto</td>
+                    <td colspan="5" class="titulo branco">folha de ponto</td>
                 </tr>
                 <tr>
-                    <td class="titulo branco" colspan="5">&nbsp;</td>
+                    <td colspan="5" class="titulo branco">&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="campo">mês referencia</td>
-                    <td class="conteudo">1 a 30</td>
-                    <td class="conteudo" colspan="3">novembro 2019</td>
+                    <td class="campo_maiuscula">mês referência</td>
+                    <td id="periodoMesReferencia" class="conteudo_direita"></td>
+                    <td id="periodoMesExtenso" colspan="3" class="conteudo"></td>
                 </tr>
                 <tr>
-                    <td colspan="5">&nbsp;</td>
+                    <td colspan="5" class="titulo branco">&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="titulo cinza" colspan="5">dados do empregador</td>
+                    <td colspan="5" class="titulo cinza">dados do empregador</td>
                 </tr>
                 <tr>
                     <td class="campo">nome:</td>
-                    <td id="empregadorNome" class="conteudo" colspan="2"></td>
-                    <td class="campo">cnpj:</td>
+                    <td id="empregadorNome" colspan="2" class="conteudo"></td>
+                    <td class="campo_maiuscula">cnpj:</td>
                     <td id="empregadorCnpj" class="conteudo"></td>
                 </tr>
                 <tr>
-                    <td colspan="5">&nbsp;</td>
+                    <td colspan="5" class="titulo branco">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="5" class="titulo cinza">dados do empregado</td>
+                </tr>
+                <tr>
+                    <td class="campo">nome:</td>
+                    <td id="empregadoNome" colspan="4" class="conteudo"></td>
+                </tr>
+                <tr>
+                    <td class="campo_maiuscula">nº ctps:</td>
+                    <td id="empregadoCtps" class="conteudo"></td>
+                    <td class="campo">série</td>
+                    <td id="empregadoSerie" colspan="2" class="conteudo"></td>
+                </tr>
+                <tr>
+                    <td class="campo">função:</td>
+                    <td id="empregadoFuncao" colspan="4" class="conteudo"></td>
+                </tr>
+                <tr>
+                    <td class="campo">horário de trabalho:</td>
+                    <td id="empregadoHorario" colspan="4" class="conteudo"></td>
+                </tr>
+                <tr>
+                    <td width="20%" class="campo_centralizado">dia</td>
+                    <td width="20%" class="campo_centralizado">hora entrada</td>
+                    <td width="20%" class="campo_centralizado">inicio almoço</td>
+                    <td width="20%" class="campo_centralizado">retorno almoço</td>
+                    <td width="20%" class="campo_centralizado">hora saída</td>
+                </tr>
+                <tr>
+                    <td colspan="5" class="titulo branco">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="campo">assinatura:</td>
+                    <td id="assinatura" colspan="4" class="conteudo"></td>
                 </tr>
             </table>
         </div>
